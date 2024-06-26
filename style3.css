@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(235,174,203,0.5466561624649859) 3%, rgba(176,183,223,1) 69%, rgba(151,187,232,1) 97%, rgba(148,187,233,1) 100%);
+}
+#main{
+    height: 100%;
+    width: 100%;
+    /* background-color: red; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+}
+#main img{
+    height: 550px;
+    position: relative;
+    z-index: 99;
+    top: 4%;
+}
+#scroll-div{
+position: absolute;
+top: 24%;
+width: 100%;
+/* height:100px; */
+white-space: nowrap;
+overflow-x: auto;
+overflow-y: hidden;
+
+}
+#scroll-div::-webkit-scrollbar{
+    display: none;
+}
+#scroll-div h1{
+    display: inline-block;
+    font-size: 130px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    margin-right: 30px;
+    letter-spacing: 5px;
+    animation-name:  scroll;
+    animation-duration: 1s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+}
+
+/* =========scroll div 2========= */
+
+#scroll-div2{
+    position: absolute;
+    top: 44%;
+    width: 100%;
+    z-index: 100;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    
+    }
+    #scroll-div2::-webkit-scrollbar{
+        display: none;
+    }
+    #scroll-div2 h1{
+        display: inline-block;
+        font-size: 150px;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        color: transparent;
+        margin-right: 30px;
+        letter-spacing: 6px;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: #000;
+        animation-name:  scroll;
+        animation-duration: 1s;
+        animation-timing-function:linear;
+        animation-iteration-count: infinite;
+    }
+    /* ==============scroll-div3============= */
+    #scroll-div3{
+        position: absolute;
+        top: 68%;
+        width: 100%;
+        white-space: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        
+        }
+        #scroll-div3::-webkit-scrollbar{
+            display: none;
+        }
+        #scroll-div3 h1{
+            display: inline-block;
+            font-size: 150px;
+            font-family: sans-serif;
+            text-transform: uppercase;
+            margin-right: 30px;
+            letter-spacing: 5px;
+            animation-name:  scroll;
+            animation-duration: 1s;
+            animation-timing-function:linear;
+            animation-direction: reverse;
+            animation-iteration-count: infinite;
+        }
+        #text{
+            font-size: 30px;
+            position: absolute;
+            font-size: myFont;
+            color: rgba(23, 23, 194, 0.547);
+            z-index: 999;
+            width: 60%;
+            top: 16%;
+            text-transform: uppercase;
+            text-align: center;
+
+        }
+        @font-face{
+            font-family: myFont;
+            src: url(./font/Monument.otf);
+            font-weight: 0;
+        }
+        @keyframes scroll{
+            0%{
+                transform: translateX(calc(-100% - 32px));
+            }
+            100%{
+                transform: translateX(0);
+             
+            }
+        }
